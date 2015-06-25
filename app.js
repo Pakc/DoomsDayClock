@@ -3,7 +3,7 @@
 (function(d, m){
 	let then = m('2015-06-24T22:00:15', 'YYYY-MM-DDTHH:mm:ss');
 
-	setInterval(() => {
+	let update = () => {
 		let now = m(),
 			years = `${now.diff(then, 'years')} Years`,
 			months = `${now.diff(then, 'months') % 12} Months`,
@@ -15,6 +15,9 @@
 
 		let el = d.querySelector('#js-moment');
 		el.innerText = `\n${years}\n${months}\n${days}\n${hours}\n${minutes}\n${seconds}!`;
-	}, 1000);
+	};
+
+	update();
+	setInterval(update, 1000);
 
 })(document, moment);
