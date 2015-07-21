@@ -1,7 +1,7 @@
 'use strict';
 
 (function(d, m){
-	let then = m('2015-07-05T22:39:15', 'YYYY-MM-DDTHH:mm:ss');
+	let then = m('2015-07-12T22:39:15', 'YYYY-MM-DDTHH:mm:ss');
 
 	let update = () => {
 		let now = m(),
